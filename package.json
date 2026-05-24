@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "vite",
+    "start": "node server.js",
     "build": "vite build",
+    "postinstall": "npm run build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
