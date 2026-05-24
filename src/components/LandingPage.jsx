@@ -553,7 +553,7 @@ const LandingPage = () => {
 
         <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
           <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={5}>
+            <Grid size={{ xs: 12, md: 5 }}>
               {/* Badge */}
               <Box
                 sx={{
@@ -659,7 +659,7 @@ const LandingPage = () => {
               </Stack>
             </Grid>
 
-            <Grid item xs={12} md={7}>
+            <Grid size={{ xs: 12, md: 7 }}>
               <Box sx={{ position: "relative" }}>
                 <ContainerShip />
                 {/* Blue glow under ship */}
@@ -701,7 +701,7 @@ const LandingPage = () => {
               { number: "99.2%", label: "On-Time Delivery" },
               { number: "24/7", label: "Live Support" },
             ].map((s, i) => (
-              <Grid item xs={6} md={3} key={i}>
+              <Grid size={{ xs: 6, md: 3 }} key={i}>
                 <StatItem {...s} />
               </Grid>
             ))}
@@ -739,7 +739,7 @@ const LandingPage = () => {
           </Box>
           <Grid container spacing={3}>
             {services.map((s, i) => (
-              <Grid item xs={12} sm={6} md={4} key={i}>
+              <Grid size={{ xs: 12, sm: 6 }} key={i}>
                 <ServiceCard {...s} />
               </Grid>
             ))}
@@ -790,9 +790,15 @@ const LandingPage = () => {
                 description:
                   "Monitor every leg of your shipment with live updates and proactive delay alerts.",
               },
+              {
+                number: "04",
+                title: "Receive & Review",
+                description:
+                  "Get delivery confirmation, digital documents, and an invoice summary — all in your dashboard.",
+              },
             ].map((step, i) => (
-              <Grid item xs={12} md={4} key={i} sx={{ position: "relative" }}>
-                {i < 2 && (
+              <Grid size={{ xs: 12, sm: 6, md: 3 }} key={i} sx={{ position: "relative" }}>
+                {i < 3 && (
                   <Box
                     sx={{
                       display: { xs: "none", md: "block" },
@@ -818,7 +824,7 @@ const LandingPage = () => {
       <Box sx={{ py: { xs: 8, md: 12 } }}>
         <Container maxWidth="lg">
           <Grid container spacing={8} alignItems="center">
-            <Grid item xs={12} md={5}>
+            <Grid size={{ xs: 12, md: 5 }}>
               <SectionLabel>Global Network</SectionLabel>
               <Typography
                 variant="h2"
@@ -854,7 +860,7 @@ const LandingPage = () => {
                 ))}
               </Stack>
             </Grid>
-            <Grid item xs={12} md={7}>
+            <Grid size={{ xs: 12, md: 7 }}>
               <Box
                 sx={{
                   borderRadius: 3,
@@ -883,7 +889,7 @@ const LandingPage = () => {
         <Container maxWidth="lg">
           <Grid container spacing={8} alignItems="center">
             {/* Info panel */}
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Box
                 sx={{
                   borderRadius: 3,
@@ -930,7 +936,7 @@ const LandingPage = () => {
                     { n: "$2B+", l: "Cargo Insured" },
                     { n: "60s", l: "Avg Quote Time" },
                   ].map(({ n, l }, i) => (
-                    <Grid item xs={6} key={i}>
+                    <Grid size={6} key={i}>
                       <Typography
                         sx={{
                           fontSize: "1.8rem",
@@ -951,7 +957,7 @@ const LandingPage = () => {
             </Grid>
 
             {/* Feature list */}
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <SectionLabel>Why Simon Ships</SectionLabel>
               <Typography
                 variant="h2"
@@ -1127,7 +1133,7 @@ const LandingPage = () => {
       >
         <Container maxWidth="lg">
           <Grid container spacing={4}>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <Stack direction="row" alignItems="center" spacing={1.5} sx={{ mb: 2 }}>
                 <ShipLogo size={28} />
                 <Typography sx={{ fontWeight: 800, fontSize: "1.1rem" }}>
@@ -1150,18 +1156,18 @@ const LandingPage = () => {
             {[
               {
                 heading: "Services",
-                links: ["Ocean Freight", "Air Freight", "Customs Brokerage", "Cargo Insurance", "API Platform"],
+                links: ["Ocean Freight", "Air Freight", "Customs Brokerage", "Cargo Insurance", "API Platform", "Warehousing"],
               },
               {
                 heading: "Company",
-                links: ["About Us", "Careers", "Press", "Partners", "Contact"],
+                links: ["About Us", "Careers", "Press", "Partners", "Sustainability", "Contact"],
               },
               {
                 heading: "Support",
-                links: ["Help Centre", "Track Shipment", "Rate Calculator", "Status Page", "API Docs"],
+                links: ["Help Centre", "Track Shipment", "Rate Calculator", "Status Page", "API Docs", "Community"],
               },
             ].map(({ heading, links }) => (
-              <Grid item xs={6} md={2.5} key={heading}>
+              <Grid size={{ xs: 6, md: 2.5 }} key={heading}>
                 <Typography
                   sx={{ fontWeight: 700, mb: 2, fontSize: "0.875rem", color: "#e2e8f0" }}
                 >
@@ -1203,7 +1209,7 @@ const LandingPage = () => {
               © 2026 Simon Ships. All rights reserved.
             </Typography>
             <Stack direction="row" spacing={3}>
-              {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
+              {["Privacy Policy", "Terms of Service", "Cookie Policy", "Accessibility"].map(
                 (link) => (
                   <Typography
                     key={link}
